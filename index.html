@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deal or No Deal – ₱1,000,000 Showdown</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="spot" aria-hidden="true"></div>
+<div class="top">
+  <h1>💼 DEAL OR NO DEAL 💼</h1>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end"><button class="rm" id="muteBtn" aria-pressed="false">🔊 Sound: On</button><button class="rm" id="rmBtn" aria-pressed="false">Reduce Motion: Off</button></div>
+</div>
+<div class="status" role="status" aria-live="polite"><b id="stTitle"></b><span id="stSub"></span></div>
+<div class="stage">
+  <div class="board" id="board" aria-label="Prize board"></div>
+  <div class="cases" id="cases"></div>
+</div>
+
+<div class="ov" id="bank"><div class="phone" role="dialog" aria-modal="true" aria-labelledby="bkName">
+  <div class="pstatus"><span id="bkState">incoming call…</span><span id="bkTime"></span></div>
+  <div class="avatar" id="bkAv" aria-hidden="true">🕴️</div>
+  <h2 id="bkName">📞 THE BANKER IS CALLING...</h2>
+  <div class="waves hide" id="bkWaves" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <p class="sub" id="bkSub" aria-live="polite"></p>
+  <div id="bkRing"><button class="big-btn deal" id="bkAns">📞 ANSWER</button></div>
+  <div id="bkOffer" class="hide"><div class="offerlbl">THE BANKER'S OFFER</div><div class="offer" id="offerAmt"></div><p id="offerNote"></p>
+    <div class="btns"><button class="big-btn deal" id="dealBtn">DEAL 🤝</button><button class="big-btn nodeal" id="noBtn">NO DEAL ❌</button></div></div>
+</div></div>
+
+<div class="ov" id="fin"><div class="dz" aria-hidden="true"><div class="beams"></div><div class="floor"></div><div class="ball"></div><div class="cat l"></div><div class="cat r"></div></div><div class="card" role="dialog" aria-modal="true" aria-labelledby="fnT">
+  <h2 id="fnT"></h2><div class="offer" id="fnAmt"></div><p id="fnTxt"></p><div class="btns" id="fnBtns"></div>
+</div></div>
+
+<!-- ===== FULL-SCREEN GIF PAGE (win / lose / eliminated) =====
+     GIF paths are set at the top of script.js (GIFS). -->
+<div class="ov" id="gp" role="dialog" aria-modal="true" aria-labelledby="gpT">
+  <img id="gpImg" alt="">
+  <div class="gifph hide" id="gpPh"></div>
+  <div class="gpcap">
+    <h2 id="gpT"></h2><div class="offer" id="gpAmt"></div><p id="gpTxt"></p>
+    <button class="big-btn again" id="gpAgain">🔄 PLAY AGAIN</button>
+  </div>
+</div>
+
+<div class="ov" id="tw"><h2 id="twT"></h2><p id="twS"></p></div>
+<div class="ov" id="alert"><h2 class="glitch">⚠️ CRITICAL SYSTEM ALERT</h2><h2>“You eliminated the ₱1,000,000 prize.”</h2><h2 id="failT" class="hide">“YOU FAILED.”<br>“DOWNLOADING VIRUS TO YOUR DEVICE...”</h2></div>
+
+<div class="ov" id="vir" role="alert">
+  <div class="chaos" id="chaos"></div>
+  <div class="vbox" id="vbox"><h3>☠ SIMULATED VIRUS.EXE (NOT REAL) ☠</h3>
+    <div class="pbar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="pb"><i id="pf"></i></div>
+    <div id="pct">0%</div><div id="log"></div></div>
+  <button class="skip" id="skipBtn"> I got your personal information!!!💀💀 </button>
+</div>
+
+<div class="ov" id="kid" style="z-index:100;background:#0b0618"><div class="card">
+  <h1 style="font-size:clamp(2rem,9vw,3.5rem)">😂 JUST KIDDING!</h1>
+  <p style="font-size:1.3rem"><b>“No virus was downloaded.”</b></p>
+  <p style="font-size:1.2rem">“You only lost the ₱1,000,000 prize.”</p>
+  <p style="font-size:1.2rem">“Better luck next game!”</p>
+  <div class="btns"><button class="big-btn again" id="againK">🔄 PLAY AGAIN</button></div>
+</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
